@@ -14,6 +14,14 @@ import (
 	"strings"
 )
 
+/*
+var a = 1
+var b, c = 2, 3
+var d bool = true
+var e int
+f := 4
+*/
+
 // creates a schedule interface with the function is_scheduled
 type schedule interface {
 	is_scheduled() bool
