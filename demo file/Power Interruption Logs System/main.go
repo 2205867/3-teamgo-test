@@ -90,6 +90,8 @@ func export_list(i interruption, list []interruption) {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println("Interruption Logged Successfully : " + to_be_printed)
 }
 
 func main() {
