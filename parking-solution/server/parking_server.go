@@ -20,7 +20,7 @@ func RunServer() {
 	}
 	defer listener.Close()
 
-	fmt.Println("Server is on.")
+	fmt.Println("Server is running.")
 
 	for {
 		// Accept connections
@@ -56,6 +56,13 @@ func handleConnection(conn net.Conn) {
 		fmt.Println("Received message from client:", clientMessage)
 
 		// Read data from the text file (BufferedReader)
+		/* BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
+
+		   StringBuilder parkingData = new StringBuilder();
+		   String line;
+		   while ((line = bufferedReader.readLine()) != null) {
+		       parkingData.append(line).append("\n");
+		   } */
 		parkingData, err := os.ReadFile("parking_data.txt")
 		if err != nil {
 			fmt.Println("Error reading data from file:", err)
@@ -71,6 +78,5 @@ func handleConnection(conn net.Conn) {
 		// Close the connection after sending the response
 		conn.Close()
 		break
-
 	}
 }

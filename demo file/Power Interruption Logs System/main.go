@@ -97,7 +97,7 @@ func main() {
 	test = interruption{"20 Sep 23 12:50", 13}
 
 	var list []interruption
-	list = import_list("list of schedule.txt")
+	list = import_list("list_of_schedule.txt")
 
 	export_list(test, list)
 }
